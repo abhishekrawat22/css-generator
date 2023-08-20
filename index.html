@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS Generator to generate a block of CSS as per your need.">
+    <meta name="keywords" content="CSS, Generator, HTML, CSS3, HTML5, CSS Generator, CSS Generators, Javascript, JS Projects">
+    <title>CSS Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="generator-wrapper">
+            <h1>CSS Generator</h1>
+            <form action="" method="get">
+                <fieldset class="global-wrapper">
+                    <div class="input-wrapper">
+                        <label for="css-selector" class="sr-only">Enter CSS Selector</label>
+                        <input type="text" name="selector" id="css-selector" placeholder="Enter CSS Selector" required />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="base-size">Base Font:</label>
+                        <input type="number" name="base" id="base-size" placeholder="in px" required />
+                    </div>
+                </fieldset>
+                <fieldset class="generator-content">
+                    <div class="input-wrapper">
+                        <label for="background-color">background-color:</label>
+                        <input type="color" name="background-color" value="#ffffff" id="background-color" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="color">color:</label>
+                        <input type="color" name="color" value="#ffffff" id="color" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="font-family">font-family:</label>
+                        <input type="text" name="font-family" id="font-family" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="font-size">font-size:</label>
+                        <input type="number" name="font-size" id="font-size" placeholder="in px" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="font-weight">font-weight:</label>
+                        <input type="text" name="font-weight" id="font-weight" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="line-height">line-height:</label>
+                        <input type="number" name="line-height" id="line-height" placeholder="in px" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="margin">margin:</label>
+                        <input type="number" name="margin" id="margin" placeholder="in px" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="padding">padding:</label>
+                        <input type="number" name="padding" id="padding" placeholder="in px" />
+                    </div>
+                </fieldset>
+                <fieldset class="form-footer">
+                    <button type="button" id="generate">Generate CSS</button>
+                    <button type="reset">Reset</button>
+                </fieldset>
+            </form>
+            <div class="generated-css-wrapper">
+                <img src="copy-regular.svg" alt="Copy Code" title="Copy" id="copy-css">
+                <textarea name="generated-css" id="generated-css" rows="10" placeholder="Generated CSS will be shown here..." readonly></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
