@@ -23,7 +23,7 @@
                     </div>
                     <div class="input-wrapper">
                         <label for="base-size">Base Font:</label>
-                        <input type="number" name="base" id="base-size" placeholder="in px" required />
+                        <input type="number" name="base" id="base-size" placeholder="in px" min="0" required />
                     </div>
                 </fieldset>
                 <fieldset class="generator-content">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="input-wrapper">
                         <label for="color">color:</label>
-                        <input type="color" name="color" value="#ffffff" id="color" />
+                        <input type="color" name="color" value="#000000" id="color" />
                     </div>
                     <div class="input-wrapper">
                         <label for="font-family">font-family:</label>
@@ -70,7 +70,11 @@
                 <textarea name="generated-css" id="generated-css" rows="10" placeholder="Generated CSS will be shown here..." readonly></textarea>
             </div>
         </div>
-    </main>
+    </main>a {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 1.9rem;
+    }
 
     <script defer src="script.js"></script>
 </body>

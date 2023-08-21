@@ -3,8 +3,15 @@
     --theme-color-secondary: #1E88E5;
     --white: #fff;
     --box-shadow: #dbdbdb;
-    --placeholder: #777;
+    --placeholder: #777777;
     --font-family: 'Poppins', sans-serif;
+    --error: 211 47 47;
+    --bg-copied: #1e88e591;
+}
+
+:root.dark-mode {
+    --white: #1F1B24;
+    --dark: #121212;
 }
 
 html {
@@ -19,7 +26,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--white);
     font-family: var(--font-family);
     margin: 0;
     padding: 3rem 1.5rem;
@@ -143,7 +150,7 @@ button {
 
 button:hover,
 button:focus {
-    box-shadow: 0 0.1rem 0.6rem 0.4rem var(--box-shadow);
+    box-shadow: 0 0rem 0.7rem 0.2rem var(--theme-color-secondary);
 }
 
 [type="button"] {
@@ -154,6 +161,18 @@ button:focus {
 [type="reset"] {
     background-color: var(--white);
     color: var(--theme-color);
+}
+
+.copied::before {
+    background-color: var(--bg-copied);
+    border-radius: 0.8rem;
+    content: 'Copied!!';
+    display: grid;
+    font-size: 2rem;
+    inset: 0;
+    place-items: center;
+    position: absolute;
+    z-index: 1;
 }
 
 .generator-wrapper {
@@ -170,6 +189,22 @@ button:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.global-wrapper .input-wrapper {
+    position: relative;
+}
+
+.global-wrapper .error::after {
+    bottom: 0;
+    color: rgb(var(--error));
+    content: '* This field is required';
+    position: absolute;
+}
+
+.global-wrapper .error input {
+    border-color: rgb(var(--error));
+    box-shadow: 0 0 0.7rem 0.2rem rgb(var(--error));
 }
 
 .generator-content {
@@ -197,7 +232,7 @@ button:focus {
 }
 
 .generated-css-wrapper {
-    padding: 1.5rem;
+    margin: 1.5rem;
     position: relative;
 }
 
@@ -206,8 +241,8 @@ button:focus {
     cursor: pointer;
     max-width: 2rem;
     position: absolute;
-    right: 2.2rem;
-    top: 2.2rem;
+    right: 1rem;
+    top: 1rem;
 }
 
 .generated-css-wrapper textarea {
