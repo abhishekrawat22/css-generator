@@ -2,11 +2,11 @@
     --theme-color: #2D36DF;
     --theme-color-secondary: #1E88E5;
     --white: #fff;
+    --black: #000;
     --box-shadow: #dbdbdb;
     --placeholder: #777777;
     --font-family: 'Poppins', sans-serif;
     --error: 211 47 47;
-    --bg-copied: #1e88e591;
 }
 
 :root.dark-mode {
@@ -164,15 +164,26 @@ button:focus {
 }
 
 .copied::before {
-    background-color: var(--bg-copied);
-    border-radius: 0.8rem;
+    background-color: var(--black);
+    border-radius: 0.5rem;
+    color: var(--white);
     content: 'Copied!!';
-    display: grid;
-    font-size: 2rem;
-    inset: 0;
-    place-items: center;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
     position: absolute;
+    right: -2.25rem;
+    top: -3.5rem;
     z-index: 1;
+}
+
+.copied::after {
+    background-color: var(--black);
+    content: '';
+    padding: 1rem;
+    position: absolute;
+    right: 1.1rem;
+    top: -1.8rem;
+    transform: rotate(45deg);
 }
 
 .generator-wrapper {
@@ -219,6 +230,16 @@ button:focus {
 
 .generator-content input {
     width: 18rem;
+}
+
+.spacing-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.spacing-wrapper input {
+    max-width: 3.25rem;
+    width: 100%;
 }
 
 #base-size {

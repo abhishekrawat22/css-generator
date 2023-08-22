@@ -33,7 +33,12 @@ generatedBtn.addEventListener('click', () => {
     }
     else {
         globalWrappers.forEach((globalWrapper) => {
-            globalWrapper.classList.add('error');
+            if(globalWrapper.querySelector('input').value == "") {
+                globalWrapper.classList.add('error');
+            }
+            else {
+               globalWrapper.classList.remove('error'); 
+            }
         })
     }
 })
@@ -41,9 +46,11 @@ generatedBtn.addEventListener('click', () => {
 // To copy CSS from the textarea on the click of a copy icon.
 copyIcon.addEventListener("click", () => {
     // Copy the CSS inside the textarea.
-    navigator.clipboard.writeText(generatedCss.value);
-    textareaWrapper.classList.add("copied")
-    setTimeout(() => {
-        textareaWrapper.classList.remove("copied")
-    }, 3000);
+    if(generatedCss.value != "") {
+        navigator.clipboard.writeText(generatedCss.value);
+        textareaWrapper.classList.add("copied")
+        setTimeout(() => {
+            textareaWrapper.classList.remove("copied")
+        }, 2000);
+    }
 })
