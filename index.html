@@ -52,13 +52,37 @@
                         <input type="number" name="line-height" id="line-height" placeholder="in px" />
                     </div>
                     <div class="input-wrapper">
-                        <label for="margin">margin:</label>
-                            <input type="number" name="margin" id="margin" placeholder="in px" />
+                        <span class="label">margin:</span>
+                        <div class="spacing-wrapper" >
+                            <label for="margin-top" class="sr-only">margin-top</label>
+                            <input type="number" name="margin" id="margin-top" placeholder="in px" />
+                            
+                            <label for="margin-right" class="sr-only">margin-right</label>
+                            <input type="number" name="margin" id="margin-right" placeholder="in px" />
+
+                            <label for="margin-bottom" class="sr-only">margin-bottom</label>
+                            <input type="number" name="margin" id="margin-bottom" placeholder="in px" />
+
+                            <label for="margin-left" class="sr-only">margin-left</label>
+                            <input type="number" name="margin" id="margin-left" placeholder="in px" />
                         </div>
+                    </div>
                     <div class="input-wrapper">
-                        <label for="padding">padding:</label>
-                            <input type="number" name="padding" id="padding" placeholder="in px" />
+                        <span class="label">padding:</span>
+                        <div class="spacing-wrapper">
+                            <label for="padding-top" class="sr-only">padding-top</label>
+                            <input type="number" name="padding" id="padding-top" placeholder="in px" />
+
+                            <label for="padding-right" class="sr-only">padding-right</label>
+                            <input type="number" name="padding" id="padding-right" placeholder="in px" />
+
+                            <label for="padding-bottom" class="sr-only">padding-bottom</label>
+                            <input type="number" name="padding" id="padding-bottom" placeholder="in px" />
+
+                            <label for="padding-left" class="sr-only">padding-left</label>
+                            <input type="number" name="padding" id="padding-left" placeholder="in px" />
                         </div>
+                    </div>
                 </fieldset>
                 <fieldset class="form-footer">
                     <button type="button" id="generate">Generate CSS</button>
