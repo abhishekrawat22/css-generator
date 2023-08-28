@@ -19,7 +19,12 @@ generatedBtn.addEventListener('click', () => {
             let inputEle = document.querySelector("#"+label.htmlFor);
             if (inputEle.value != "") {
                 if(inputEle.getAttribute('type') === 'number') {
-                    generatedObj[label.htmlFor] = (inputEle.value/baseFont.value) + "rem";
+                    if(inputEle.value%baseFont.value == 0) {
+                        generatedObj[label.htmlFor] = (inputEle.value/baseFont.value) + "rem";
+                    }
+                    else {
+                        generatedObj[label.htmlFor] = ((inputEle.value/baseFont.value).toFixed(3)) + "rem"; // toFixed will show the decimal numbers upto three places.
+                    }
                 }
                 else {
                     generatedObj[label.htmlFor] = inputEle.value;
